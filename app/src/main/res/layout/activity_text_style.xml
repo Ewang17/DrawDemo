@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/popbtn_cancel"
+            android:src="@drawable/ic_common_close_white_bounding"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加文本"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/popbtn_sure"
+            android:src="@drawable/ic_common_done_white_bounding"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"/>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:background="@drawable/yulan"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        >
+        <TextView
+            android:id="@+id/fill_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="填充"
+            android:textSize="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_toRightOf="@+id/fill_text"
+            android:id="@+id/fill_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/color"
+            android:foreground="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_toRightOf="@id/fill_text_color"
+            android:id="@+id/stroke_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="边线"
+            android:textSize="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_toRightOf="@+id/stroke_text"
+            android:id="@+id/stroke_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/color"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        >
+
+        <TextView
+            android:id="@+id/add_text_size"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="字体大小:10"
+            android:textSize="18dp"
+            android:layout_centerVertical="true"/>
+
+        <SeekBar
+            android:layout_width="240dp"
+            android:layout_height="30dp"
+            android:id="@+id/text_size_seekbar"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:progress="10"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:background="@color/colorPrimary"
+        />
+
+
+</LinearLayout>

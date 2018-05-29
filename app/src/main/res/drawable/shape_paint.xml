@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- This is the main color -->
+
+
+    <item android:bottom="3dp" android:top="3dp">
+        <shape>
+
+            <stroke android:color="@color/white"
+                    android:width="2px"/>
+        </shape>
+    </item>
+
+
+</layer-list>

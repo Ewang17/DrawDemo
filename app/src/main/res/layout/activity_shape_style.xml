@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/popbtn_cancel_shape"
+            android:src="@drawable/ic_common_close_white_bounding"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择形状"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/popbtn_sure_shape"
+            android:src="@drawable/ic_common_done_white_bounding"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"/>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:background="@drawable/yulan"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@color/colorPrimary"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout1_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/text_size_shape"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/size_seekbar_shape"
+                        android:layout_marginLeft="20dp"
+                        android:text="粗细：10"
+                        android:textSize="18dp"/>
+
+                    <SeekBar
+                        android:id="@+id/size_seekbar_shape"
+                        android:layout_width="230dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:progress="10"/>
+
+                    <ImageView
+                        android:id="@+id/minus_shape"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_toLeftOf="@+id/plus_shape"
+                        android:layout_toStartOf="@+id/plus_shape"
+                        android:src="@drawable/ic_color_picker_minus"
+                        android:layout_centerInParent="true"/>
+
+                    <ImageView
+                        android:id="@+id/plus_shape"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_color_picker_plus"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout2_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/relative_layout1_shape">
+
+                    <TextView
+                        android:id="@+id/text_alpha_shape"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/size_seekbar2_shape"
+                        android:layout_marginLeft="20dp"
+                        android:text="透明度：100%"
+                        android:textSize="18dp"/>
+
+                    <SeekBar
+                        android:id="@+id/size_seekbar2_shape"
+                        android:layout_width="230dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:progress="100"/>
+
+                    <ImageView
+                        android:id="@+id/minus2_shape"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_toLeftOf="@+id/plus2_shape"
+                        android:layout_toStartOf="@+id/plus2_shape"
+                        android:src="@drawable/ic_color_picker_minus"
+                        android:layout_centerInParent="true"/>
+
+                    <ImageView
+                        android:id="@+id/plus2_shape"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_color_picker_plus"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/relative_layout2_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/fill_shape"
+                            android:layout_marginLeft="80dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="填充"
+                            android:textSize="20dp"/>
+
+                        <RadioButton
+                            android:id="@+id/stroke_shape"
+                            android:layout_marginLeft="50dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="描边"
+                            android:textSize="20dp"
+                            android:checked="true"
+                            android:layout_alignParentRight="true"/>
+
+                    </RadioGroup>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

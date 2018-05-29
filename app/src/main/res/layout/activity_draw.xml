@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_draw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <FrameLayout
+            android:id="@+id/draw_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1.0"
+            android:layout_alignParentTop="true"
+            >
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:id="@+id/picture"
+                android:visibility="gone"
+                />
+
+           <!-- <include layout="@layout/content_main"/>-->
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/gray_light" />
+
+            <ImageView
+                android:id="@+id/color_change"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/color"
+                />
+
+            <ImageView
+                android:id="@+id/pencil"
+                android:layout_marginLeft="30dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/color_change"
+                android:layout_toRightOf="@+id/color_change"
+                android:background="@drawable/shape_paint"
+                android:src="@drawable/ic_draw_white"/>
+
+            <ImageView
+                android:id="@+id/eraser"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/pencil"
+                android:layout_toRightOf="@+id/pencil"
+                android:background="@drawable/shape_paint"
+                android:src="@drawable/ic_menu_eraser"/>
+
+            <ImageButton
+                android:id="@+id/bg_color"
+                android:layout_marginRight="10dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/text"
+                android:layout_toLeftOf="@+id/text"
+                android:src="@drawable/bg"/>
+
+            <ImageButton
+                android:id="@+id/text"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toStartOf="@+id/shape"
+                android:layout_toLeftOf="@+id/shape"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/text"/>
+
+            <ImageButton
+                android:id="@+id/shape"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toStartOf="@+id/add"
+                android:layout_toLeftOf="@+id/add"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/shape"/>
+
+            <ImageButton
+                android:id="@+id/add"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/add"/>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
